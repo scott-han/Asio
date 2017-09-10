@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="asio_socket" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/asio_socket" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/asio_socket" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-DWIN32_LEAN_AND_MEAN" />
+			<Add directory="C:/mingw-w64/mingw64/include" />
+			<Add directory="C:/installation/gcc_7_1_0_64/include/boost-1_65_1" />
+		</Compiler>
+		<Linker>
+			<Add library="C:/installation/gcc_7_1_0_64/lib/libboost_system-mgw71-mt-1_65_1.a" />
+			<Add library="ws2_32" />
+			<Add directory="C:/mingw-w64/mingw64/lib" />
+			<Add directory="C:/installation/gcc_7_1_0_64/lib" />
+		</Linker>
+		<Unit filename="active.cpp" />
+		<Unit filename="active.h" />
+		<Unit filename="asio_test.cpp" />
+		<Unit filename="example_handler.h" />
+		<Unit filename="msg_handler.h" />
+		<Unit filename="msg_with_header.h" />
+		<Unit filename="server_listerner.h" />
+		<Unit filename="session_handler.h" />
+		<Unit filename="shared_queue.h" />
+		<Unit filename="socket_session.h" />
+		<Unit filename="test_client_handler.h" />
+		<Unit filename="test_server_handler.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1505035012 source:c:\asio_backup\code_blocks\asio\asio_socket\active.cpp
+	"active.h"
+	<iostream>
+
+1505035012 c:\asio_backup\code_blocks\asio\asio_socket\active.h
+	<thread>
+	<functional>
+	<condition_variable>
+	<mutex>
+	<memory>
+	"shared_queue.h"
+
+1505035012 c:\asio_backup\code_blocks\asio\asio_socket\shared_queue.h
+	<queue>
+	<mutex>
+	<exception>
+	<condition_variable>
+
