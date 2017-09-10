@@ -48,7 +48,8 @@ public:
 	void HandleBrokenSessionEvt(int session_id, const boost::system::error_code& err) override {
 	
 		Task task = std::bind([=]() {
-			auto& del_session = std::find_if(session_list.begin(), session_list.end(), [&session_id](auto& s) { return s->getSessionId() == session_id; });
+			auto del_session = std::find_if(session_list.begin(), session_list.end(),
+                                    [&session_id](auto& s) { return s->getSessionId() == session_id; });
 			if (del_session != session_list.end()) {
 				session_list.erase(del_session);
 			}

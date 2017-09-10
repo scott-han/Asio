@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include "msg_handler.h"
 #include "session_handler.h"
 #include <thread>
@@ -48,5 +47,5 @@ public:
 private:
 	std::unique_ptr<socket_session> session;
 	boost::asio::io_service io_service;
-	int send_msg_indx = 0;
+	std::vector<std::string>::size_type send_msg_indx = 0;
 };

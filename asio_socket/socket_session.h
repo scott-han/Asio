@@ -6,7 +6,7 @@
 #include "msg_handler.h"
 #include "session_handler.h"
 using boost::asio::ip::tcp;
-static std::atomic<int> session_id_count = 1;
+static std::atomic<int> session_id_count{1};
 class socket_session
 	//: public std::enable_shared_from_this<socket_session>
 {

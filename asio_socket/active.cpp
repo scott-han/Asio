@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+
 #include "active.h"
 #include <iostream>
 

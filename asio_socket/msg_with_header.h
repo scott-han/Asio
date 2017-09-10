@@ -9,8 +9,8 @@ public:
 	MessageWithHeader(const MessageWithHeader& other) = default;
 	MessageWithHeader& operator=(const MessageWithHeader& other) = default;
 	MessageWithHeader(MessageWithHeader&& other)
-		: m_data(std::move(other.m_data))
-		, m_body_length(other.m_body_length)
+		: m_body_length(other.m_body_length)
+		, m_data(std::move(other.m_data))
 	{
 		other.m_body_length = 0;
 	}
@@ -49,7 +49,8 @@ public:
 		return m_body_length + header_length;
 	}
 	void allocateMemory() {
-		m_data.swap(std::vector<char>(getMsgLength(),0));
+		//m_data.swap(std::vector<char>(getMsgLength(),0));
+		m_data= std::vector<char>(getMsgLength(),0);
 		memcpy(m_data.data(), &m_body_length, header_length);
 	}
 	

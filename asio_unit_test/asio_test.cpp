@@ -1,5 +1,4 @@
 //#define NOMINMAX
-#include "stdafx.h"
 #define BOOST_TEST_MODULE ImpExchange test
 #include <boost/test/included/unit_test.hpp>
 

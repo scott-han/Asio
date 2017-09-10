@@ -13,8 +13,8 @@ public:
 	SocketListerner(boost::asio::io_service& io_service,
 		const tcp::endpoint& endpoint, IMsgHandler &gui_client, ISessionHandler& session_handler)
 		: io_service_(io_service),
-		acceptor_(io_service, endpoint),
-		m_gui_client(gui_client), m_session_handler(session_handler)
+		acceptor_(io_service, endpoint),m_session_handler(session_handler),
+		m_gui_client(gui_client)
 	{
 	}
 
